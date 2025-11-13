@@ -1,0 +1,94 @@
+/* ОБЩИЙ СТИЛЬ ТЕЛА И ФОНА */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Светлый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 450px; /* Ограничиваем ширину для мобильных устройств */
+    background-color: #fff; /* Белый игровой фон */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* 📊 ПАНЕЛЬ СТАТИСТИКИ */
+#stats-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e6f7ff; /* Очень светло-голубой фон */
+    border-radius: 10px;
+}
+
+.stat-bar {
+    background-color: #ccc;
+    color: #333;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Здесь JavaScript будет менять цвет фона в зависимости от уровня! */
+}
+
+/* 🐶 ОБЛАСТЬ КОРГИ */
+#corgi-area {
+    text-align: center;
+    padding: 20px 0;
+    min-height: 250px; /* Чтобы изображение не прыгало */
+}
+
+#corgi-image {
+    width: 180px; /* Размер корги на экране */
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Плавное изменение при взаимодействии */
+}
+
+/* 🕹️ ПАНЕЛЬ КНОПОК */
+#action-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 кнопки в ряд */
+    gap: 15px;
+    padding: 15px 0 5px 0;
+}
+
+.action-button {
+    padding: 15px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    /* Разные цвета для кнопок */
+}
+
+#btn-feed {
+    background-color: #ff6347; /* Томатный (Кормить) */
+}
+#btn-water {
+    background-color: #4682b4; /* Стальной синий (Поить) */
+}
+#btn-bathe {
+    background-color: #9370db; /* Средний пурпурный (Купать) */
+}
+#btn-walk {
+    background-color: #3cb371; /* Средний морской зеленый (Гулять) */
+    grid-column: span 2; /* Кнопка "Гулять" занимает всю ширину */
+}
+
+.action-button:active {
+    opacity: 0.8; /* Эффект нажатия */
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корги-Го! | Виртуальный питомец</title>
+    
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+</head>
+<body>
+    <div id="game-container">
+        
+        <div id="stats-panel">
+            <div class="stat-bar" id="stat-hunger">❤️ Сытость: 100%</div>
+            <div class="stat-bar" id="stat-thirst">💧 Жажда: 100%</div>
+            <div class="stat-bar" id="stat-clean">🧼 Чистота: 100%</div>
+            <div class="stat-bar" id="stat-happy">😊 Счастье: 100%</div>
+        </div>
+
+        <div id="corgi-area">
+            <img id="corgi-image" src="corgi_default.png" alt="Ваш Корги" style="width: 200px;">
+        </div>
+
+        <div id="action-panel">
+            <button id="btn-feed" class="action-button">🍴 Кормить</button>
+            <button id="btn-water" class="action-button">💧 Поить</button>
+            <button id="btn-bathe" class="action-button">🛁 Купать</button>
+            <button id="btn-walk" class="action-button">🌳 Гулять (Играть)</button>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+    
+    <script>
+        // Этот маленький скрипт запускает Web App и настраивает его в Telegram
+        Telegram.WebApp.ready();
+        // Устанавливаем цвет фона (для красоты, берем из CSS)
+        Telegram.WebApp.setBackgroundColor('#f7f7f7'); 
+    </script>
+</body>
+</html>
